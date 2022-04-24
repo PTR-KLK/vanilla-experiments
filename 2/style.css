@@ -1,0 +1,47 @@
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.square {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 2px solid darkslategray;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  -moz-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
